@@ -1,3 +1,5 @@
 # FinCordWebApp
-Web App for Fin Cord
+Web App for FinCord
+
+Web App URL: https://fincord.herokuapp.com/
 
