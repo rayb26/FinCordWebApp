@@ -18,14 +18,16 @@ google-resumable-media==2.1.0
 googleapis-common-protos==1.54.0
 grpcio==1.43.0
 grpcio-status==1.43.0
+gunicorn==20.1.0
 httplib2==0.20.2
 idna==3.3
 itsdangerous==2.0.1
 Jinja2==3.0.3
 joblib==1.1.0
 MarkupSafe==2.0.1
-gunicorn==20.1.0
 msgpack==1.0.3
+nltk==3.6.7
+ordereddict==1.1
 packaging==21.3
 proto-plus==1.19.8
 protobuf==3.19.1
