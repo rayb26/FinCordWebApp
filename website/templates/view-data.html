@@ -1,7 +1,7 @@
-<!-- Code created by Rayhan Biju 2021 -->
 {% extends "base.html" %} {% block title %} View Terms and Definitions {% endblock %} {% block content
 %}
 <br>
+
 
 <head>
     <meta charset="utf-8" />
@@ -18,44 +18,67 @@
       crossorigin="anonymous"
     />
 
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+
+
+
+
   </head>
+
+
 <style>
-table, th, td {
-  border:1px solid black;
+        .list-group{
+    max-height: 730px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
 }
+
+
 </style>
 
 <body>
 
-<div class = "container">
+<div class="container">
+    <input class="form-control" id="searchInput" type="text" placeholder="Find Terms and Definitions...">
+    <br>
+    <ul class="list-group" id="myList">
+        {% for term in terms %}
+        <li class="list-group-item">{{ term }}
+        </li>
+        {% endfor %}
 
-    <input class="form-control" id="searchInput" type="text" placeholder="Search Terms and Definitions...">
-
+    </ul>
 
 
 </div>
 
+
 </body>
-<h1> <center> Terms and Definitions </center></h1>
-<ul class="list-group list-group-flush" id="myList">
-
-  {% if coming_soon_titles is not none %}
-
-  {% for data in terms %}
-  <li class="list-group-item">
-    {{ data }}
-    <tr>
 
 
 
 
-  </li>
-  {% endfor %}
-  {% endif %}
-</ul>
 
-
-</ul>
 
 {% endblock %}
 

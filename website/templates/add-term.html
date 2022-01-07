@@ -1,10 +1,11 @@
-<!-- Code created by Rayhan Biju 2021 -->
-{% extends "base.html" %} {% block title %}Add Term {% endblock %} {% block content
+{% extends "base.html" %} {% block title %}Add and View Terms {% endblock %} {% block content
 %}
 <br>
 
 <html>
   <head>
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -19,10 +20,23 @@
       crossorigin="anonymous"
     />
 
+
   </head>
+  <style>
+        .list-group{
+    max-height: 400px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+</style>
+
+  <body>
 
 <form method="POST">
-  <h3 align="center">Add Term</h3>
+  <h3 align="center">Add and View Terms</h3>
   <div class="form-group">
     <label for="term">Term</label>
     <input
@@ -54,5 +68,28 @@
 
 
 </form>
+
+
+
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <input class="form-control" id="searchInput" type="text" placeholder="Search For a Term or a Definition...">
+    <br>
+    <ul class="list-group" id="myList">
+        {% for term in terms %}
+        <li class="list-group-item">{{ term }}
+        </li>
+        {% endfor %}
+
+    </ul>
+
+
+</div>
+</body>
+
+
 
 {% endblock %}
