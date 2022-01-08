@@ -9,7 +9,7 @@ views = Blueprint('views', __name__)
 @views.route('/view-data', methods=['GET'])
 def view_data():
 
-    return render_template('view-data.html', terms=Database.read_data())
+    return render_template('view-data.html', terms=['term1', 'term2', 'term3'])
 
 
 @views.route('/add-term', methods=['GET', 'POST'])
@@ -22,4 +22,4 @@ def add_term():
         flash("Term Added", category='success')
         return redirect(url_for('views.add_term'))
 
-    return render_template('add-term.html', terms=Database.read_data())
+    return render_template('add-term.html', terms=['term1', 'term2', 'term3'])
