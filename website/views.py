@@ -18,7 +18,7 @@ def add_term():
     data = request.form
 
     if request.method == 'POST' and len(data.get('term')) > 0 and len(data.get('definition')) > 0:
-        Database.add_term_def(data.get('term'), data.get('definition'))
+        #Database.add_term_def(data.get('term'), data.get('definition'))
         flash("Term Added", category='success')
         return redirect(url_for('views.add_term'))
 
